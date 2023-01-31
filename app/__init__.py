@@ -21,7 +21,7 @@ def main():
         name = sys.argv[1]
     # Create the output string using f-string,
     # which is a way to embed expressions inside string literals
-    output = f"Hello, {name}"
+    output = f"Hi , {name}"
     # Call the "console_out" function and pass the "output" string as an argument
     console_out(output)
 

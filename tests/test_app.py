@@ -16,7 +16,7 @@ def test_with_command_line_argument():
     # item is the fake name
     sys.argv = ['myscript', name]
     # define the expected output as a string that says "Hello, [fake name]"
-    expected_output = f"Hello, {name}\n"
+    expected_output = f"Hi , {name}\n"
     # capture the output of the `main` function to a string using the `capture_output` helper function
     captured_output = capture_output(main)
     # assert that the captured output is equal to the expected output, otherwise raise an error that says "Does not
@@ -31,7 +31,7 @@ def test_without_command_line_argument():
     sys.argv = [
         'myscript']
     # define the expected output as a string that says "Hello, "
-    expected_output = "Hello, \n"
+    expected_output = "Hi , \n"
     # capture the output of the `main` function to a string using the `capture_output` helper function
     captured_output = capture_output(
         main)
