@@ -1,7 +1,8 @@
 import io  # import the `io` module to handle input/output operations
+import os
 import sys  # import the `sys` module to interact with the Python interpreter and access command line arguments
 from faker import Faker  # import the `Faker` class from the `faker` module to generate fake data
-
+from git import Repo
 from app import main, console_out, get_argument_as_string  # import the `main` function from the `app` module
 
 
@@ -58,3 +59,12 @@ def capture_output(func):
     func()  # call the function passed as an argument to the `capture_output` function
     sys.stdout = sys.__stdout__  # reset the standard output stream to its original value
     return captured_output.getvalue()  # return the captured output as a string
+
+
+def test_git():
+    repo = Repo.init()
+    assert repo, "Can't Find The Repo"
+    assert "dockerfix" in repo.heads, "Does not have a branch called dockerfix"
+
+    master_commits = list(repo.iter_commits("master"))
+    assert len(master_commits) <= 13, "Not enough commits on the master branch"
