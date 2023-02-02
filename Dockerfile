@@ -9,3 +9,4 @@ WORKDIR /home/myuser
 COPY --chown=myuser:myuser . .
 RUN pip3 install -r requirements.txt
 ENTRYPOINT ["runuser", "-u", "myuser", "--", "python3", "app/__init__.py"]
+CMD ["is218"]
