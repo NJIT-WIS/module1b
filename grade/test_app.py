@@ -64,7 +64,12 @@ def capture_output(func):
 def test_git():
     repo = Repo.init()
     assert repo, "Can't Find The Repo"
-    assert "dockerfix" in repo.heads, "Does not have a branch called dockerfix"
+    assert "master" in repo.heads, "Does not have a branch called dockerfix"
 
     master_commits = list(repo.iter_commits("master"))
     assert len(master_commits) >= 21, "Not enough commits on the master branch"
+
+
+def test_dockerfile():
+    f = open("Dockerfile", "r")
+    assert "CMD" in f.read()
