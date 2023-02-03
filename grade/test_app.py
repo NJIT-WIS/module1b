@@ -67,4 +67,4 @@ def test_git():
     assert "dockerfix" in repo.heads, "Does not have a branch called dockerfix"
 
     master_commits = list(repo.iter_commits("master"))
-    assert len(master_commits) <= 13, "Not enough commits on the master branch"
+    assert len(master_commits) >= 21, "Not enough commits on the master branch"
