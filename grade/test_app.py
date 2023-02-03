@@ -72,4 +72,4 @@ def test_git():
 
 def test_dockerfile():
     f = open("Dockerfile", "r")
-    assert "CMD" in f.read()
+    assert "CMD" in f.read(), "Can't find CMD in Dockerfile"
