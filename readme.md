@@ -44,10 +44,9 @@ Each module in this course will follow the same process, unless otherwise noted 
 5. When you complete the assignment, you must push the code back and then go to the "Actions" tab on your repositories'
    homepage to see it autograde the assignment. If the autograder turns green then you got 100, if it is red then you
    will need to click on the autograder link on that page to find your errors to fix them. You should test if your code
-   passes
-   the grader locally before pushing by following the tip below.
+   passes the grader locally before pushing by following the tip below.  YOUR OLD WORKFLOWS WILL NOT TURN GREEN
 
-[![Click to Start Assignment](module_content/images/start.png)](https://classroom.github.com/a/KvHfpLwn)
+[![Click to Start Assignment](module_content/images/start.png)](https://classroom.github.com/a/p88kre1s)
 
 ## Tips
 
